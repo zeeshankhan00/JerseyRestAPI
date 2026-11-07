@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee"
+         xmlns:xsi="http://w3.org"
+         xsi:schemaLocation="https://jakarta.ee https://jakarta.ee/web-app_6_0.xsd"
+         version="6.0">
+
+  <servlet>
+    <servlet-name>JerseyWebApplication</servlet-name>
+    <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+    <init-param>
+      <param-name>jersey.config.server.provider.packages</param-name>
+      <param-value>com.telusko.RestAPIUsingDatabase</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>JerseyWebApplication</servlet-name>
+    <url-pattern>/api/*</url-pattern>
+  </servlet-mapping>
+</web-app>
